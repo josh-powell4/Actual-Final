@@ -1,0 +1,506 @@
+#console-box{
+  position:absolute;
+  top:48px; 
+  right:48px;
+  height:400px;
+  width:300px;
+  background-color:#000;
+  color: #55ff55;
+  font-family: monospace;
+  padding:6px; 
+}
+
+.container{
+			width: 800px;
+			margin: 0 auto;
+		}
+
+
+
+		ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li{
+			background: none;
+			color: #222;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		ul.tabs li.current{
+			background: #ededed;
+			color: #222;
+		}
+
+		.tab-content{
+			display: none;
+			background: #ededed;
+			padding: 15px;
+		}
+
+		.tab-content.current{
+			display: inherit;
+		}
+
+.highlightdescription {font-size: 12px;}
+.spotlightdescription {font-size: 12px;}
+.twaagtitle {
+	font-size: 12px;
+	font-weight:bold;
+}
+.twaagdate {
+	font-size: 12px;
+	font-weight:bold;
+}
+.twaagevent {font-size: 12px;}
+.twaageventdetails {
+	font-size: 12px;
+	color:#666;
+}
+
+body {
+	margin:0; padding:0;
+	background: #fff;}	
+body, td {
+	font: normal 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#333;}
+/***********************************************/
+/* Links
+/***********************************************/ 
+
+a:link, a:visited {
+	color: #375989;
+	text-decoration: none;}
+a:hover, a:active {	
+	color: #06f;
+	text-decoration: underline;}
+	
+img {border: 0;}
+	
+p {margin: 1.2em 0;}
+
+body.IndexPage {background: #fff url(http://images.pcmac.org/SiSFiles/Schools/AL/MadisonCity/BJHigh/images/PageBg-Index.jpg) no-repeat 50% 0;}
+body.IndexPage #PageWrapper {
+	background: #fff url(http://images.pcmac.org/SiSFiles/Schools/AL/MadisonCity/BJHigh/images/PageBg-Index.jpg) no-repeat 50% 0;}
+body.DefaultPage {background: #fff url(http://images.pcmac.org/SiSFiles/Schools/AL/MadisonCity/BJHigh/images/PageBg-Default.jpg) no-repeat 50% 0;}
+body.DefaultPage #PageWrapper {
+	background: #fff url(http://images.pcmac.org/SiSFiles/Schools/AL/MadisonCity/BJHigh/images/PageBg-Default.jpg) no-repeat 50% 0;}
+
+#Header {
+	height:356px;
+	margin-bottom: 5px;}	
+body.DefaultPage #Header {
+	height:250px;}	
+#LogoTitle {
+	float:left;
+	display:block;
+	height:160px;
+	width:532px;}
+
+#Slideshow {
+	background: transparent url(http://images.pcmac.org/SiSFiles/Schools/AL/MadisonCity/BJHigh/images/SchoolPhoto-Index.jpg) no-repeat 0 0;;
+	float:right;
+	height:350px;
+	margin:10px 1px 0 3px;
+	width:450px;
+	overflow:hidden;}
+#Slideshow img {border:0;}
+#SlideOverlay {
+	clear:right;
+	float:right;
+	height:83px;
+	margin:-83px 1px 0 0;
+	width:450px;
+	padding:0;}
+#OverlayBg {
+	background: transparent url(http://images.pcmac.org/SiSFiles/Schools/AL/MadisonCity/BJHigh/images/SlideshowOverlay.png) no-repeat 0 0 !important;
+	text-align: right;
+	height:83px;
+	margin:0;
+	width:450px;
+	position: relative;
+	bottom: 0;
+	z-index: 999;}
+
+#HomeSearch {
+	float: left;
+	clear:left;
+	width: 250px;
+	height: 86px;
+	margin: 35px 0 0 10px;}
+#HomeSearch form, #DefaultSearch form {margin:0; padding:0;}
+#HomeSearch select, #HomeSearch input, #DefaultSearch select, #DefaultSearch input {font: 12px "Trebuchet MS", Arial, Helvetica, sans-serif; margin: 4px 0 0 0; width: 150px; height: 24px;}
+#HomeSearch .SearchSubmit, #DefaultSearch .SearchSubmit {width: auto;}
+
+#DefaultSearch {clear:none; margin: 8px 0 0 5px; padding: 0 0 0 0;}
+#DefaultSearch select, #DefaultSearch input {font: 11px "Trebuchet MS", Arial, Helvetica, sans-serif; margin: 0 1px 0 0; height:auto; width: auto;}
+#DefaultSearch input {width: 120px;}
+
+
+#ButtonsLeft {
+	float: left;
+	clear:left;
+	padding: 18px 0 10px; }
+#ButtonsLeft img, #SlideOverlay img {border:0;}
+#ButtonsLeft a, #SlideOverlay a {display: block; float:left;}
+#SlideOverlay a,  a.RightBtn {float:right;}
+#ButtonsLeft a:link, #ButtonsLeft a:visited, #ButtonsLeft a:hover, #ButtonsLeft a:active, 
+#SlideOverlay a:link, #SlideOverlay a:visited, #SlideOverlay a:hover, #SlideOverlay a:active {
+	text-decoration: none;}
+
+/***********************************************/
+#SideNavigation {
+	float:left;
+	padding: 0 0 20px 0;
+	margin: 0 10px;
+	width: 190px;
+	border-right: 1px solid #DADADA;}
+#SideNavMenu .NavTitle {font-weight: bold; font-size:14px; margin: 0 0 2px; cursor: default; text-align:left;}
+#SideNavMenu .NavLinks {margin: 0 0 13px; display: block;clear: both;}
+#SideNavMenu .NavLinks a, #CommonLinks a {display: block;}
+#CommonLinks {padding: 0; margin: 20px 0 13px 0; }
+#SideNavMenu {width: 169px; padding-bottom: 5px; height: inherit;}
+#SideNavMenu .NavLinks a:link, #SideNavMenu .NavLinks a:visited, #CommonLinks a:link, #CommonLinks a:visited {text-decoration: none; color: #375989;}
+#SideNavMenu .NavLinks a:hover, #SideNavMenu .NavLinks a:active, #CommonLinks a:hover, #CommonLinks a:active  {text-decoration: underline; color: #375989;}
+/***********************************************/
+
+#NotifyMeButton {margin: 20px 0 0; }
+
+#ContentArea {float:right; width:770px; margin: 20px 0; overflow: hidden;}
+#ContentArea a:link, #ContentArea a:visited{color: #375989;}
+#ContentArea a:hover, #ContentArea a:active{color: #06f;}
+
+#FooterWrapper {clear:both; border-top: 1px solid #dadada;}
+#LegalInfo { padding: 15px 0; }
+#Legal p.left {text-align: left !important; line-height: 1.2em !important;}
+#Legal p.right {text-align: right !important;}
+	
+/* Main Nav Button Styles */
+
+  
+.DistrictSite {
+	background: transparent url(Common/CommonIncludes/Template11/images/Skin1/Buttons/Btn-DistrictSite.png) no-repeat 0 0 !important;
+	_background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://bjhs.madisoncity.k12.al.us/Common/CommonIncludes/Template11/images/Skin1/Buttons/Btn-DistrictSite.png');
+	_cursor: hand;}
+
+/* End Main Nav Styles */	
+
+/***********************************************/
+/*             Search Stuff               */
+/***********************************************/
+
+/*---- Search ----*/
+
+.searchtxt {
+	text-align: right;
+	font:bold 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #FFF;
+}
+.searchitem{
+	font:bold 10px Verdana, Arial, Helvetica, sans-serif; 
+	color: #000;
+}
+
+/***********************************************/ 
+
+
+#Page {
+/*	background-color: #FFF;
+*/	padding: 0;
+	margin: 0;
+}
+body > #Page {}
+#DefaultIncludes {
+	height: auto;
+	width: 889px;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+#DefaultIncludes .SponsorBlock {
+	float: right;
+	width: 130px;
+	padding-left: 7px;}
+#DefaultIncludes .Main {}
+#DefaultIncludes > .Main {}
+#DefaultIncludes span.NewsBullet, #SplashIncludes span.NewsBullet {
+	display: block;
+	float: left;
+	margin: 2px 3px;
+	width: 10px;
+	height: 12px;
+	background: transparent url(Common/CommonIncludes/Template11/images/Skin1/Icons/NewsStoryBullet.gif) no-repeat top left;}
+#SplashIncludes {
+ 	padding: 5px 7px;
+	margin: 5px 0 0 0;}
+td > #SplashIncludes {width: 280px;}
+#SplashIncludes a:link, #SplashIncludes a:visited {color: #375989;}
+#SplashIncludes a:hover, #SplashIncludes a:active {color: #06f;}
+.pageheader {
+	font: normal 18px Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 5px 0;
+	color: #666;}
+.PageBottom {
+	background-color: #ddd;
+	border-top: 1px solid #e9e9e9;
+	border-bottom: 1px solid #6F6F6F;}
+	
+/***********************************************/
+/* Styled Alt and Title Tags
+/***********************************************/ 
+#nicetitlecontainer{
+	border: 1px solid #375989;
+	background-color: #375989;
+	filter: alpha(opacity=75); /* to adjust opacity of background, next three elements must be set to same level */
+	-moz-opacity:.75;
+	opacity:.75;}
+div.nicetitle{
+	font-size: 10px;
+	left: 0;
+	padding: 6px;
+	position: fixed;
+	_position: absolute;
+	top: 0;
+	text-align: center;
+	max-width: 25em;
+	width: auto;
+	z-index: 1001;
+	height: auto;}	
+div.nicetitle p {
+	margin: 0;
+	padding-bottom: 0px;
+	font: normal 11px Arial, Helvetica, Verdana, sans-serif;
+	color:#FFF;
+	filter: alpha(opacity=100); /* to adjust opacity of background, next three elements must be set to same level */
+	-moz-opacity:1;
+	opacity:1;}
+div.nicetitle p.destination {
+	color: #FFF;
+	font-weight: normal;
+	font-size: 11px;
+	padding-bottom: 0px;
+	text-align: left;
+	filter: alpha(opacity=90); /* to adjust opacity of background, next three elements must be set to same level */
+	-moz-opacity:.9;
+	opacity:.9;}
+#nicetitlecontainer div.nicetitle img {
+	filter: alpha(opacity=90); /* to adjust opacity of background, next three elements must be set to same level */
+	-moz-opacity:.9;
+	opacity:.9;}
+
+/***********************************************/
+/* Legal and Logos
+/***********************************************/ 
+#Legal {background: #FFF; margin: 0; font: 11px Arial, Verdana, Helvetica, sans-serif;}
+#Legal :link, #footer :visited { color: #777; }
+#Legal #PoweredBy { background: #FFF;border: 0; float: left; margin-left:7px; }
+#Legal #PoweredBy:hover { background: transparent }
+#Legal p { margin: 0 }
+#Legal p.left {background: #FFF;padding: 0 1em; font-size: 11px;text-align: center;}
+#Legal p.right {background: #FFF;text-align: center;font-size: 11px;padding: 0 3px 0 0;}
+/*------------------------------------------------------------*/
+/*Default Site Styles*/
+/*------------------------------------------------------------*/
+
+hr {color: #ddd; height: 1px;}
+.formitem{
+	border: 1pt solid #999;
+	background-color: #F4F4F4; 
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	font-size: 11px; color: #000}
+.smalltxt {font-size: 11px; color: #000}
+.whitebold {font-weight: bold; color: #FFF; }
+.whitetxt {color: #FFF;}
+/*---- Headers ----*/
+.header {font-size: 13px; font-weight: bold;}
+.header a:link, .header a:visited {color: #375989;}
+.header a:hover, .header a:active {color: #06f;}
+.sectionheader{
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold; color: #375989;}
+.subheader {
+	font-size: 14px; font-weight: bold; color: #666;}
+.splashheader {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #375989;}
+.calendarheader {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #FFF
+}
+
+/*---- Links ----*/
+.td1{
+	border: 1pt solid #000;
+	background-color: #999; 
+	font: bold 11px Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	color: #FFF;}
+.td2{
+	border: 1pt solid #000;
+	background-color: #999; 
+	font: normal 11px Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	color: #FFF;}
+
+/*---- Calendar ----*/
+.calheadtd{
+	border-right: #000 1pt solid; border-top: #000 1pt solid; border-left: #000 1pt solid; border-bottom: #000 1pt solid;
+	background-color: #375989; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FFF
+}
+.calday1td{
+	border-right: #000 1pt solid; border-left: #000 1pt solid; border-bottom: #000 1pt solid;
+	background-color: #888; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FFF
+}
+.calday2td{
+	border-right: #000 1pt solid; border-bottom: #000 1pt solid;
+	background-color: #888; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FFF
+}
+.day1td{
+	border-right: #000 1pt solid; border-left: #000 1pt solid; border-bottom: #000 1pt solid;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 9px; color: #000
+}
+.day2td{
+	border-right: #000 1pt solid; border-bottom: #000 1pt solid;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 9px; color: #000
+}
+
+/*---- Pictures ----*/
+.caption {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #FFF
+}
+.picturetd{
+	border-right: #000 1pt solid; border-top: #000 1pt solid; border-left: #000 1pt solid; border-bottom: #000 1pt solid;
+	background-color: #777; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 9px; color: #FFF
+}
+
+/*---- Sponsors ----*/
+.SponsorBlock div.Sponsors {
+	background: #FFF; border: 1px solid #333; float: inherit}
+.Sponsors {
+	margin: 5px 0 0 0;
+}
+.Sponsor {
+	float:right;
+}
+	
+/*---- BEGIN SCHOOL DROP MENU AND FIXED LINKS ----*/
+.DefaultTopLinks {margin-top: 10px;}
+	
+.schoollinkscontainer { padding: 30px;}
+#TopNav {margin: 0; height: 20px; overflow: visible; text-transform: capitalize; color: #D3D3D3; repeat-y 0 0; padding-left:8px;}
+#TopNav .divider {padding: 0 2px; color: #000;}
+#TopNav a, #TopNav a:link, #TopNav a:visited, #TopNav a:active {text-decoration: none;color: #D3D3D3; font: normal 11px "Trebuchet MS", Tahoma, Verdana, "sans-serif";}
+#TopNav a:hover {text-decoration: none;}
+
+#MainNav {float: left;}
+#newnav {padding:0px;}
+ul#nav, ul#nav2 {margin: 0; padding: 12px 8px 0 0; text-align: center; padding: 0; list-style:none; z-index: 500; float:right;}
+ul#nav {margin: 20px; }
+
+#nav a, #nav2 a {
+	text-decoration: none;
+	 z-index: 500;}
+
+/*li.TopNav ul {display: none;}*/
+
+li.TopNav ul { 
+	width: 220px;
+	max-height: 600px;
+	overflow: auto;
+	overflow-x: hidden;
+	text-align:left;
+	top: 24px;
+	_top: 55px;
+	left: -9999px; 
+	padding: 5px;
+	margin: 0;
+	position: absolute;
+	font-weight: normal;
+	z-index: 500;
+	background: #3c3c3c;
+	border: 1px solid #3c3c3c;
+	border-top: 0;}
+
+li.TopNav {
+	display: inline;
+	float: inherit;
+	position: relative;
+	cursor: default;
+	margin: 0 0;
+	float: left;
+	z-index: 500;}
+
+li.TopNav a:link, li.TopNav a:visited {
+	font: 11px "Trebuchet MS", Tahoma, Verdana, "sans-serif";
+	padding:0px;
+	text-decoration:none;
+	text-transform: capitalize;
+	font-weight: bold;
+	color: #D3D3D3;
+	z-index: 500;}
+
+li.TopNav a:hover, li.TopNav a:active {
+	z-index: 500;
+	background:transparent;
+	color: #999;}
+
+li.TopNav a.Active:link, li.TopNav a.Active:visited, li.TopNav a.Active:hover, li.TopNav a.Active:active {
+ 	z-index: 500;
+	color: #FFF;}
+	
+li.TopNav li {padding: 1px; width: 100%}
+
+li.TopNav li a:link, li.TopNav li a:visited {
+	z-index: 500;
+	_text-align: left;
+	color: #D3D3D3;
+	font: 11px "Trebuchet MS", Tahoma, Verdana, "sans-serif";
+	white-space: nowrap;
+	text-align: left;
+	text-transform:none;
+	margin: 1px;
+	float:none;}
+	
+li.TopNav li a:hover, li.TopNav li a:active {
+	z-index: 500; color: #ffffff;}
+	
+#nav li>ul {
+	top: auto;}
+#nav li:hover ul, 
+#nav li.over ul,
+#nav ul.show-menu{
+	left: -135px; 
+	top: 60px; text-align: right;}
+
+/*---- END SCHOOL DROP MENU AND FIXED LINKS ----*/ 	
+	
+/*---- skip link ----*/
+#skiptocontent a {
+	padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	background:transparent;
+	-webkit-transition: top 1s ease-out, background 1s linear;
+    transition: top 1s ease-out, background 1s linear;
+    z-index: 100;}
+#skiptocontent a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#9d0000;
+	outline:0;	
+	-webkit-transition: top .1s ease-in, background .5s linear;
+    transition: top .1s ease-in, background .5s linear;}
+
+#MainPageArea {padding: 0 15px 15px 15px}
+	
+-->
+
+#Cohort {
+  text-align:center;
+  align: center;
+  font-size:18px;
+  font-family:helvetica;
+}
